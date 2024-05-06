@@ -1,0 +1,43 @@
+﻿<Page x:Class="Delivery_client.Pages.CouriersPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Delivery_client.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="CouriersPage">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+    <Grid Grid.Column="0">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Column="0" Grid.Row="0" Content="Имя:" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="NameTextBox" Grid.Column="1" Grid.Row="0" Margin="5"/>
+        <Label Grid.Column="0" Grid.Row="1" Content="Фамилия:" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="SurnameTextBox" Grid.Column="1" Grid.Row="1" Margin="5"/>
+        <Label Grid.Column="0" Grid.Row="2" Content="Отчество (н/о):" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="PatronymicTextBox" Grid.Column="1" Grid.Row="2" Margin="5"/>
+        <Label Grid.Column="0" Grid.Row="3" Content="Номер телефона:" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="PhoneNumberTextBox" Grid.Column="1" Grid.Row="3" Margin="5"/>
+        <Button x:Name="AcceptBtn" Grid.Column="1" Grid.Row="4" Content="Принять" Margin="15, 5, 15, 5" Style="{StaticResource MyBtn}" Click="AcceptBtn_Click"/>
+    </Grid>
+    <DataGrid x:Name="MainDataGrid" Grid.Column="2"/>
+    </Grid>
+</Page>
